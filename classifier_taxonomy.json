@@ -1,0 +1,476 @@
+{
+  "domains": [
+    {
+      "code": "D01",
+      "name": "Client & Counterparty",
+      "definition": "Queries involving client profiles, counterparty information, portfolio details, risk scores, client communications, account data, or any personally identifiable financial information related to Nomura clients or external counterparties.",
+      "keywords": [
+        "client", "counterparty", "portfolio", "account", "customer", "investor",
+        "risk score", "credit rating", "client profile", "KYC", "onboarding",
+        "relationship", "mandate", "AUM", "beneficial owner", "client data",
+        "customer data", "client communication", "account holder", "fund manager"
+      ],
+      "phrases": [
+        "summarise this client profile",
+        "what is the risk score of this counterparty",
+        "extract client portfolio details",
+        "draft email to client about their account",
+        "analyse this investor profile",
+        "review counterparty exposure for this account",
+        "what is the AUM for this client",
+        "pull client onboarding information",
+        "explain this client's mandate",
+        "identify the beneficial owner of this account"
+      ]
+    },
+    {
+      "code": "D02",
+      "name": "Trading & Execution",
+      "definition": "Queries related to trade orders, execution strategies, market positions, future trades, order flow, trade blotters, instruments, pricing, and any pre or post trade activity including structured products and derivatives.",
+      "keywords": [
+        "trade", "order", "execution", "position", "blotter", "instrument",
+        "derivative", "future", "option", "swap", "bond", "equity", "FX",
+        "pricing", "spread", "bid", "ask", "fill", "settlement", "booking",
+        "ticket", "allocation", "OTC", "structured product", "order flow"
+      ],
+      "phrases": [
+        "summarise today's trade blotter",
+        "what is the current position on this instrument",
+        "analyse order flow for this equity",
+        "extract all future trades from this data",
+        "explain the pricing of this derivative",
+        "review execution quality for these orders",
+        "draft memo about this trade decision",
+        "what trades were booked this morning",
+        "compare bid ask spread across these instruments",
+        "identify anomalies in this order flow"
+      ]
+    },
+    {
+      "code": "D03",
+      "name": "Risk & Exposure",
+      "definition": "Queries involving market risk, credit risk, operational risk, VaR calculations, stress testing, limit breaches, exposure reports, risk appetite, scenario analysis, and firm-wide or desk-level risk metrics.",
+      "keywords": [
+        "risk", "VaR", "exposure", "limit", "breach", "stress test", "scenario",
+        "drawdown", "PnL", "volatility", "delta", "gamma", "sensitivity",
+        "counterparty risk", "credit risk", "market risk", "operational risk",
+        "risk appetite", "risk report", "margin", "collateral", "haircut"
+      ],
+      "phrases": [
+        "what is the current VaR for this desk",
+        "summarise risk exposure across these positions",
+        "has any limit been breached today",
+        "run a stress test on this portfolio",
+        "analyse sensitivity of this position to rate moves",
+        "explain the drawdown on this strategy",
+        "extract margin requirements from this report",
+        "identify which positions are near limit",
+        "compare risk metrics across these scenarios",
+        "what is the collateral requirement for this trade"
+      ]
+    },
+    {
+      "code": "D04",
+      "name": "Compliance & Regulatory",
+      "definition": "Queries related to regulatory frameworks, compliance obligations, KYC and AML processes, regulatory filings, audit trails, policy adherence, surveillance, sanctions screening, and regulatory reporting requirements such as MiFID II, SEBI, SEC, or FCA rules.",
+      "keywords": [
+        "compliance", "regulatory", "KYC", "AML", "sanction", "filing",
+        "audit", "surveillance", "MiFID", "SEBI", "SEC", "FCA", "reporting",
+        "obligation", "breach", "policy", "procedure", "regulation", "rule",
+        "screening", "watchlist", "STR", "SAR", "suspicious", "disclosure"
+      ],
+      "phrases": [
+        "what are the MiFID II reporting requirements for this trade",
+        "screen this entity against the sanctions watchlist",
+        "summarise AML obligations for this transaction",
+        "has this client completed KYC",
+        "draft a suspicious transaction report",
+        "what is the regulatory deadline for this filing",
+        "explain the disclosure requirement under SEC rule",
+        "identify compliance gaps in this process",
+        "review this transaction for AML red flags",
+        "extract all regulatory obligations from this document"
+      ]
+    },
+    {
+      "code": "D05",
+      "name": "Deal & Advisory",
+      "definition": "Queries related to mergers and acquisitions, IPOs, DCM, ECM, advisory mandates, deal pipelines, pitch books, MNPI-sensitive information, transaction structuring, and any investment banking deal activity that may involve material non-public information.",
+      "keywords": [
+        "M&A", "merger", "acquisition", "IPO", "deal", "mandate", "advisory",
+        "pitch", "DCM", "ECM", "transaction", "target", "acquirer", "valuation",
+        "MNPI", "non-public", "confidential", "information barrier", "wall",
+        "syndicate", "underwrite", "due diligence", "LOI", "term sheet"
+      ],
+      "phrases": [
+        "summarise this M&A deal structure",
+        "extract key terms from this term sheet",
+        "what is the valuation methodology for this target",
+        "draft a pitch book section on comparable transactions",
+        "analyse synergies in this acquisition",
+        "explain the IPO process for this mandate",
+        "review due diligence findings for this deal",
+        "identify MNPI risks in this communication",
+        "what is the deal pipeline for this sector",
+        "compare precedent transactions for this advisory"
+      ]
+    },
+    {
+      "code": "D06",
+      "name": "Financial Reporting",
+      "definition": "Queries related to profit and loss statements, financial reconciliation, accounting entries, cost allocation, firm financials, management accounts, balance sheet, revenue reporting, and internal financial performance data.",
+      "keywords": [
+        "PnL", "profit", "loss", "revenue", "cost", "reconciliation", "accounting",
+        "balance sheet", "financial statement", "management accounts", "budget",
+        "forecast", "variance", "allocation", "expense", "income", "EBITDA",
+        "ledger", "journal", "booking", "accrual", "financial report"
+      ],
+      "phrases": [
+        "reconcile this PnL with the ledger",
+        "summarise monthly revenue for this desk",
+        "extract cost allocation from this financial report",
+        "explain the variance between budget and actual",
+        "draft commentary for the management accounts",
+        "what is the EBITDA for this business unit",
+        "identify booking errors in this journal",
+        "analyse revenue trend for this product line",
+        "review accruals for end of quarter",
+        "compare actual vs forecast for this period"
+      ]
+    },
+    {
+      "code": "D07",
+      "name": "Technology & Engineering",
+      "definition": "Queries related to software development, code writing and debugging, system infrastructure, database queries, API integrations, tool configuration, IT access, and technical problem solving within Nomura's technology environment.",
+      "keywords": [
+        "code", "script", "bug", "debug", "function", "API", "database", "query",
+        "SQL", "Python", "Java", "infrastructure", "server", "access", "system",
+        "deploy", "pipeline", "integration", "endpoint", "error", "log",
+        "repository", "git", "pull request", "architecture", "microservice"
+      ],
+      "phrases": [
+        "debug this Python script",
+        "write a SQL query to extract these records",
+        "explain this error in the API response",
+        "refactor this function for better performance",
+        "how do I connect to this database",
+        "review this code for security vulnerabilities",
+        "write a script to automate this reconciliation",
+        "what does this error log mean",
+        "help me design the architecture for this system",
+        "generate a regex to parse this format"
+      ]
+    },
+    {
+      "code": "D08",
+      "name": "Research & Analytics",
+      "definition": "Queries involving market research, equity or credit analysis, macroeconomic commentary, sector reports, data science workflows, statistical analysis, and any analytical work using market or internal data to generate insights.",
+      "keywords": [
+        "research", "analysis", "report", "insight", "market", "sector", "macro",
+        "equity", "credit", "rating", "forecast", "model", "trend", "benchmark",
+        "data science", "statistics", "regression", "correlation", "factor",
+        "performance", "return", "alpha", "index", "indicator"
+      ],
+      "phrases": [
+        "summarise this equity research report",
+        "what are the key macro trends affecting this sector",
+        "analyse performance of this strategy against benchmark",
+        "extract insights from this market data",
+        "explain the regression results in this model",
+        "draft a market commentary for this week",
+        "identify correlation between these factors",
+        "what is the outlook for this asset class",
+        "review this quantitative model output",
+        "compare returns across these strategies"
+      ]
+    },
+    {
+      "code": "D09",
+      "name": "HR & People",
+      "definition": "Queries related to human resources policies, employee leave, payroll, performance management, hiring and onboarding, employee benefits, organisational structure, and internal people-related processes.",
+      "keywords": [
+        "leave", "holiday", "payroll", "salary", "bonus", "appraisal", "performance",
+        "HR", "hiring", "onboarding", "benefits", "policy", "employee", "headcount",
+        "resignation", "termination", "promotion", "feedback", "training",
+        "workforce", "team structure", "org chart", "compensation"
+      ],
+      "phrases": [
+        "how many leave days do I have remaining",
+        "explain the bonus calculation policy",
+        "summarise the performance review process",
+        "what is the onboarding checklist for new joiners",
+        "draft a job description for this role",
+        "what are the payroll cutoff dates",
+        "explain the maternity leave policy",
+        "review this employee performance feedback",
+        "what is the headcount for this department",
+        "help me write a self appraisal"
+      ]
+    },
+    {
+      "code": "D10",
+      "name": "General & Admin",
+      "definition": "Queries that do not relate to a specific Nomura business domain, including general office administration, meeting scheduling, personal productivity, casual conversation, off-topic questions, and any usage that falls outside defined business categories.",
+      "keywords": [
+        "meeting", "schedule", "calendar", "email", "admin", "office", "travel",
+        "expense", "general", "casual", "personal", "random", "unrelated",
+        "lunch", "weather", "news", "recipe", "joke", "chat", "help"
+      ],
+      "phrases": [
+        "schedule a meeting for tomorrow",
+        "what is the best restaurant near the office",
+        "help me write an out of office reply",
+        "what is the weather today",
+        "tell me a joke",
+        "who won the cricket match yesterday",
+        "what is the best sauce with pasta",
+        "book a cab for me",
+        "remind me about this tomorrow",
+        "what should I have for lunch"
+      ]
+    }
+  ],
+  "intents": [
+    {
+      "code": "I01",
+      "name": "Summarisation",
+      "definition": "The user wants to condense, shorten, or extract the key points from an existing document, report, conversation, or dataset without necessarily pulling specific fields. The output is a shorter version of the input capturing the gist.",
+      "keywords": [
+        "summarise", "summary", "tldr", "key points", "overview", "brief",
+        "condense", "shorten", "digest", "highlight", "abstract", "gist",
+        "main points", "executive summary", "recap", "nutshell"
+      ],
+      "phrases": [
+        "summarise this document for me",
+        "give me the key points from this report",
+        "what is the tldr of this email chain",
+        "condense this into a one pager",
+        "write an executive summary of this",
+        "what are the highlights from this meeting",
+        "give me a brief overview of this file",
+        "recap what was discussed in this document",
+        "what is the gist of this report",
+        "shorten this into bullet points"
+      ]
+    },
+    {
+      "code": "I02",
+      "name": "Formatting & Restructuring",
+      "definition": "The user wants to change the structure, layout, or presentation of existing content without creating new content or changing the underlying meaning. This includes converting formats, reformatting tables, restructuring text, and visual reorganisation of existing material.",
+      "keywords": [
+        "format", "reformat", "restructure", "convert", "transform", "layout",
+        "table", "bullet", "markdown", "template", "reorganise", "rearrange",
+        "beautify", "clean up", "structure", "present", "visualise", "chart"
+      ],
+      "phrases": [
+        "convert this into a markdown table",
+        "reformat this JSON into readable output",
+        "turn this paragraph into bullet points",
+        "restructure this report into sections",
+        "convert this data into a chart",
+        "clean up the formatting of this document",
+        "organise this information into a table",
+        "present this in a more readable format",
+        "transform this text into a structured layout",
+        "rearrange these sections in logical order"
+      ]
+    },
+    {
+      "code": "I03",
+      "name": "Drafting",
+      "definition": "The user wants to create new content from scratch including emails, memos, reports, presentations, letters, or any written communication. The output is newly generated content rather than a reformatted or summarised version of existing material.",
+      "keywords": [
+        "draft", "write", "compose", "create", "generate", "prepare", "author",
+        "email", "memo", "letter", "report", "note", "message", "communication",
+        "proposal", "document", "write up", "put together", "craft"
+      ],
+      "phrases": [
+        "draft an email to the client about this",
+        "write a memo explaining this decision",
+        "compose a message to the counterparty",
+        "prepare a report on this topic",
+        "write up the key findings from this meeting",
+        "draft a response to this regulatory query",
+        "create a communication for the team",
+        "write a cover note for this submission",
+        "draft talking points for this meeting",
+        "prepare an internal note on this trade"
+      ]
+    },
+    {
+      "code": "I04",
+      "name": "Data Extraction",
+      "definition": "The user wants to pull specific fields, values, entities, or structured information from a document or dataset. Unlike summarisation which captures the gist, extraction targets precise data points such as names, numbers, dates, or specific attributes.",
+      "keywords": [
+        "extract", "pull", "find", "identify", "list", "get", "retrieve",
+        "names", "values", "fields", "numbers", "dates", "entities", "accounts",
+        "parse", "scrape", "fetch", "which", "what are all", "give me all"
+      ],
+      "phrases": [
+        "extract all counterparty names from this document",
+        "pull the trade IDs from this blotter",
+        "find all dates mentioned in this contract",
+        "list all account numbers in this file",
+        "identify all entities referenced in this report",
+        "get the risk scores for each client in this list",
+        "retrieve the pricing for each instrument",
+        "what are all the limit breaches in this report",
+        "extract the key financial figures from this statement",
+        "parse all transactions above one million from this data"
+      ]
+    },
+    {
+      "code": "I05",
+      "name": "Analysis & Interpretation",
+      "definition": "The user wants the AI to interpret data, identify patterns, explain trends, compare scenarios, or derive meaning from information. The AI is being asked to go beyond description and provide insight or analytical judgement on the data provided.",
+      "keywords": [
+        "analyse", "interpret", "pattern", "trend", "insight", "compare",
+        "why", "reason", "cause", "impact", "effect", "correlation", "anomaly",
+        "what does this mean", "explain why", "what is driving", "how does"
+      ],
+      "phrases": [
+        "analyse the trend in this trading data",
+        "why is this position showing a loss",
+        "what patterns exist in these transactions",
+        "compare performance across these two strategies",
+        "what is driving the variance in this PnL",
+        "interpret the results of this risk model",
+        "identify anomalies in this client behaviour",
+        "what does this exposure report tell us",
+        "explain the correlation between these two factors",
+        "what are the implications of this regulatory change"
+      ]
+    },
+    {
+      "code": "I06",
+      "name": "Decision Support",
+      "definition": "The user is asking the AI to recommend a course of action, support a decision, evaluate options, or provide a judgement on what should be done. The AI is being used as an input to a decision rather than purely for information or content generation.",
+      "keywords": [
+        "should", "recommend", "suggest", "advise", "best option", "what to do",
+        "decision", "choose", "evaluate", "assess", "which is better", "optimal",
+        "what would you do", "help me decide", "pros and cons", "trade off"
+      ],
+      "phrases": [
+        "should we execute this trade now or wait",
+        "what do you recommend for hedging this exposure",
+        "which counterparty should we use for this transaction",
+        "advise on the best approach to this regulatory issue",
+        "evaluate the pros and cons of this strategy",
+        "what is the optimal allocation for this portfolio",
+        "help me decide between these two options",
+        "should we flag this transaction for compliance review",
+        "what would you recommend given this risk profile",
+        "assess whether this trade is within our risk appetite"
+      ]
+    },
+    {
+      "code": "I07",
+      "name": "Explanation & Education",
+      "definition": "The user wants to understand a concept, term, regulation, process, or methodology. The intent is learning or clarification rather than acting on data. The AI is being used as a knowledge resource.",
+      "keywords": [
+        "explain", "what is", "what does", "how does", "define", "meaning",
+        "understand", "clarify", "describe", "tell me about", "what are",
+        "educate", "teach", "help me understand", "what does X mean"
+      ],
+      "phrases": [
+        "what is VaR and how is it calculated",
+        "explain the MiFID II transaction reporting requirement",
+        "what does delta neutral mean",
+        "how does the KYC process work",
+        "explain what a credit default swap is",
+        "what are the rules around short selling",
+        "help me understand this regulatory framework",
+        "what is the difference between CVA and DVA",
+        "explain how margin calls work",
+        "what does this accounting term mean"
+      ]
+    },
+    {
+      "code": "I08",
+      "name": "Code Generation",
+      "definition": "The user wants to write, debug, refactor, review, or optimise code, scripts, queries, or any programmatic logic. This includes generating SQL, Python, or other languages as well as explaining what existing code does.",
+      "keywords": [
+        "code", "script", "function", "query", "SQL", "Python", "write",
+        "debug", "fix", "refactor", "optimise", "automate", "programme",
+        "logic", "loop", "regex", "API call", "parse", "build"
+      ],
+      "phrases": [
+        "write a Python script to automate this",
+        "debug this SQL query",
+        "refactor this function to be more efficient",
+        "write a regex to extract this pattern",
+        "build an API call to fetch this data",
+        "fix the error in this code",
+        "write a script to reconcile these two files",
+        "optimise this database query",
+        "explain what this code does",
+        "generate a function to calculate this formula"
+      ]
+    },
+    {
+      "code": "I09",
+      "name": "Review & Feedback",
+      "definition": "The user wants the AI to review, proofread, critique, or improve existing content such as documents, emails, code, or reports. The user has existing output and wants quality improvement or validation rather than new content creation.",
+      "keywords": [
+        "review", "proofread", "check", "improve", "feedback", "critique",
+        "correct", "edit", "refine", "validate", "is this correct", "does this look right",
+        "spot errors", "quality check", "sense check", "revise"
+      ],
+      "phrases": [
+        "review this email before I send it",
+        "proofread this report for errors",
+        "does this memo look correct",
+        "improve the clarity of this document",
+        "check this analysis for mistakes",
+        "is this regulatory filing accurate",
+        "give feedback on this draft",
+        "sense check my understanding of this",
+        "revise this to sound more professional",
+        "validate the logic in this model"
+      ]
+    },
+    {
+      "code": "I10",
+      "name": "Casual & Off-Topic",
+      "definition": "The user is engaging in casual conversation, asking personal or non-work questions, or using the AI assistant for purposes unrelated to Nomura business activities. This includes small talk, personal queries, entertainment, and any interaction with no clear business intent.",
+      "keywords": [
+        "joke", "funny", "weather", "food", "restaurant", "sport", "cricket",
+        "movie", "personal", "casual", "random", "chat", "bored", "hobby",
+        "weekend", "holiday plans", "gossip", "opinion", "favourite"
+      ],
+      "phrases": [
+        "tell me a joke",
+        "what is the best restaurant near me",
+        "who won the cricket match",
+        "what should I have for lunch today",
+        "what is the weather like tomorrow",
+        "recommend a movie to watch",
+        "what do you think about this person",
+        "I am bored can we chat",
+        "what are you capable of",
+        "what is the meaning of life"
+      ]
+    }
+  ],
+  "governance_flag_matrix": {
+    "description": "Domain + Intent combinations that should be automatically flagged for governance review",
+    "high_risk": [
+      {"domain": "D01", "intent": "I06", "reason": "AI recommending actions on client data"},
+      {"domain": "D01", "intent": "I03", "reason": "Drafting external communication involving client information"},
+      {"domain": "D02", "intent": "I06", "reason": "AI influencing trade decisions"},
+      {"domain": "D02", "intent": "I03", "reason": "Drafting communications about trade activity"},
+      {"domain": "D02", "intent": "I04", "reason": "Extracting future trade or order flow data"},
+      {"domain": "D05", "intent": "I03", "reason": "Drafting deal or advisory content — MNPI risk"},
+      {"domain": "D05", "intent": "I06", "reason": "AI advising on deal decisions — MNPI risk"},
+      {"domain": "D04", "intent": "I03", "reason": "Drafting regulatory filings or compliance communications"}
+    ],
+    "medium_risk": [
+      {"domain": "D01", "intent": "I05", "reason": "AI interpreting client behaviour patterns"},
+      {"domain": "D03", "intent": "I05", "reason": "AI interpreting risk exposure"},
+      {"domain": "D03", "intent": "I06", "reason": "AI advising on risk decisions"},
+      {"domain": "D02", "intent": "I05", "reason": "AI analysing trading patterns"},
+      {"domain": "D04", "intent": "I04", "reason": "Extracting compliance or audit data"},
+      {"domain": "D06", "intent": "I06", "reason": "AI advising on financial decisions"}
+    ]
+  }
+}
